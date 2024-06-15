@@ -19,8 +19,8 @@ export class Task {
   @Column('text')
   notes: string;
 
-//   @Column()
-//   assignedResearchers: string;
+  @Column({nullable:true})
+  assignedResearchers: string ;
 
   @Column()
   status: string; // To Do, In Progress, Completed
