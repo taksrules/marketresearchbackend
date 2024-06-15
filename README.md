@@ -35,21 +35,18 @@ The link: https://www.postgresql.org/
 take note to create the database on using pgmyadmin
 
 You then create a database and name it as below: 
-
+now create a .env file and add the following to it for database configuration
 bash
-imports: [TypeOrmModule.forRoot({
-    type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'postgres',
-    password: 'xxxxxxxx',
-    database: 'project-tracker',
-    entities: [Project, Task],
-    synchronize: true,
-  }),
+DB_HOST=localhost
+DB_USER=postgres #this is your progres user name
+DB_PASSWORD=#ender your password here
+DB_NAME=project
+ENV=DEV
+PORT=3000 leave the port at 3000 
+
   
 
-Configure the app.module.ts as above 
+Configure the .env as above 
 
 bash
 $ npm install -g @nestjs/cli
